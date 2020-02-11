@@ -1,27 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
+    
     this.state = {
-      string: "Hello Simon Peter Tamale"
-    };
+
+      monsters: [
+        {
+          name: 'Frankenstine',
+          id: 'ac01'
+        },
+        {
+          name: 'Dracula',
+          id: 'ac02'
+        },
+        {
+          name: 'Zombie',
+          id: 'ac03'
+        },
+        {
+          name: 'Fray',
+          id: 'ac04'
+        }
+      ]};
   }
 
   render() {
     return (
+    
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>{this.state.string}</p>
-          <button
-            onClick={() => this.setState({ string: "Hello Zhavia Namuli" })}
-          >
-            Change text
-          </button>
-        </header>
+        {
+          this.state.monsters.map ( monsters => <h2 key = {monsters.id}>  {monsters.name} </h2> )
+        }
       </div>
     );
   }
