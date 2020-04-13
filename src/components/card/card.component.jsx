@@ -1,7 +1,7 @@
 /* eslint-disable no-template-curly-in-string */
 import React from 'react';
 
-import './card.styl.css';
+import './card.style.css';
 
 export const Card = props => {
 
