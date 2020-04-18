@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { CardList } from './components/card-list/card-list.component';
+import { CardList }         from './components/card-list/card-list.component';
 
-import { SearchBox } from './components/search-box/search-box.component';
+import { SearchBox }        from './components/search-box/search-box.component';
 
 import './App.css';
 
@@ -12,8 +12,8 @@ class App extends Component {
     
     this.state = {
 
-      monsters: [],
-      searchField:''
+      monsters    : [],
+      searchField : ''
 
     };
     
@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   handleChange = (event) => {
-    this.setState({ searchField: event.target.value });
+    this.setState({ searchField   : event.target.value });
   }
 
   render() {
